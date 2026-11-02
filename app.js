@@ -1,4 +1,4 @@
-import { addTodo, countTodos, formatSummary, removeTodo, toggleTodo } from "./todos.js";
+import { addTodo, removeTodo, summaryText, toggleTodo } from "./todos.js";
 
 let todos = [];
 
@@ -33,9 +33,9 @@ function render() {
       return item;
     })
   );
-  const counts = countTodos(todos);
-  summary.hidden = counts.total === 0;
-  summary.textContent = counts.total === 0 ? "" : formatSummary(counts);
+  const text = summaryText(todos);
+  summary.hidden = text === "";
+  summary.textContent = text;
 }
 
 form.addEventListener("submit", (event) => {

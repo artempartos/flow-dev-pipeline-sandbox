@@ -19,3 +19,8 @@ export function countTodos(todos) {
 export function formatSummary({ done, total }) {
   return `${done} of ${total} done`;
 }
+
+export function summaryText(todos) {
+  if (todos.length === 0) return "";
+  return formatSummary(countTodos(todos));
+}
