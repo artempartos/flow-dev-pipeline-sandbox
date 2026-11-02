@@ -8,6 +8,6 @@ for an agentic delivery pipeline.
   `todos.js` gets a test in `test/`. There is no linter.
 - Branches: work branches from `develop`, PRs target `develop`. `staging` deploys
   to GitHub Pages (workflow `deploy-staging`). `main` is released by a person only.
-- Staging: https://artempartos.github.io/flow-dev-pipeline-sandbox/ — no login, no data
+- Staging: https://blog.partos.me/flow-dev-pipeline-sandbox/ — no login, no data
   persists (state is in memory and resets on reload).
 - Commits: Conventional Commits.
