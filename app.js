@@ -1,10 +1,11 @@
-import { addTodo, removeTodo, toggleTodo } from "./todos.js";
+import { addTodo, countTodos, formatSummary, removeTodo, toggleTodo } from "./todos.js";
 
 let todos = [];
 
 const form = document.querySelector("#new-todo");
 const input = document.querySelector("#title");
 const list = document.querySelector("#todos");
+const summary = document.querySelector("#summary");
 
 function render() {
   list.replaceChildren(
@@ -32,6 +33,9 @@ function render() {
       return item;
     })
   );
+  const counts = countTodos(todos);
+  summary.hidden = counts.total === 0;
+  summary.textContent = counts.total === 0 ? "" : formatSummary(counts);
 }
 
 form.addEventListener("submit", (event) => {

@@ -11,3 +11,11 @@ export function toggleTodo(todos, id) {
 export function removeTodo(todos, id) {
   return todos.filter((todo) => todo.id !== id);
 }
+
+export function countTodos(todos) {
+  return { done: todos.filter((todo) => todo.done).length, total: todos.length };
+}
+
+export function formatSummary({ done, total }) {
+  return `${done} of ${total} done`;
+}
