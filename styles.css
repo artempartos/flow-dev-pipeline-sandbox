@@ -47,3 +47,8 @@ li.done label {
   color: var(--muted);
   text-decoration: line-through;
 }
+
+#summary {
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
